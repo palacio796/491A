@@ -13,6 +13,9 @@ export default function Page() {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => { 
+
+
+
     // Implement your login logic here
   }
 
@@ -47,7 +50,7 @@ export default function Page() {
           <Pressable 
             onPress={() => 
               router.push({
-                pathname: "/users/register",
+                pathname: "/users/visiter_pfp",   
               })}>
                 <Text style ={styles.fontID}>Don't have an account?<Text style={styles.registerLink}> Register</Text></Text>
           </Pressable>
@@ -58,6 +61,22 @@ export default function Page() {
                 pathname: "/users/forgotPassword",
               })}>
                 <Text style={styles.registerLink}>Forgot Password?</Text>
+          </Pressable>
+
+          <Pressable 
+            onPress={() => 
+              router.push({
+                pathname: "/users/owner_pfp",
+              })}>
+                <Text style={styles.ownerPFP}>owner_pfp?</Text>
+          </Pressable>
+
+          <Pressable 
+            onPress={() => 
+              router.push({
+                pathname: "/users/visiter_pfp",
+              })}>
+                <Text style={styles.visiter_PFP}>visiter_pfp_pfp</Text>
           </Pressable>
 
         </View>
