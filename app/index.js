@@ -79,6 +79,7 @@ export default function Page() {
                 <Text style={styles.visiter_PFP}>visiter_pfp_pfp</Text>
           </Pressable>
 
+
         </View>
       </ImageBackground>
       <Text style={styles.logo}>© 2024 ChatterBox. All Rights Reserved.</Text>

@@ -6,27 +6,10 @@ import {router} from "expo-router";
 
 function owner_pfp() {
 
-    const navigation = useNavigation();
 
-    const goToSettingsPage = () => {
-        navigation.navigate('users/profileSettings')}
-
-    const goToEditProfilePage = () => {
-        navigation.navigate('users/edit_profile')}
-    
-
-    
-
+ 
   return (
     <View style={styles.container}>
-
-        {/*Settings and privacy Button */}
-        <TouchableOpacity style={styles.SettingsIcon} onPress={goToSettingsPage}>
-        <Image
-            source= {require('/Users/danielpalacio/Downloads/School/491A/assets/images/profile/settings-icon.webp')}
-            style={styles.SettingsIcon}
-        />
-        </TouchableOpacity>
 
         {/*Profile picture */}
         <Image
@@ -34,29 +17,33 @@ function owner_pfp() {
             style={styles.profilePicture}
         />
 
+        {/*edit profile picture*/}
+        <Text style={styles.editProfilePicture}>Edit Profile Picture</Text>
+
         {/*Profile banner */}
         <Image
             source={require('/Users/danielpalacio/Downloads/School/491A/assets/images/profile/profile-banner-placeholder.png')}
             style={styles.profileBanner}
         />
 
+        {/*change profile banner*/}
+        <Text style={styles.editProfileBanner}>Edit Profile Banner</Text>
+
         {/*Username*/}
         <Text style={styles.profileUsername}>@profile-username</Text>
 
- 
-         {/* Edit Profile button*/}
+        {/*Name*/}
+        <Text style={styles.Name}>Name</Text>
+
+        {/*Username*/}
+        <Text style={styles.Bio}>Bio</Text>
+
         
-        <View style = {styles.buttonContainer} >
-        <TouchableOpacity style={styles.editProfileButton} onPress={goToEditProfilePage}>
-            <Text style={styles.editProfileButtonText}>EDIT PROFILE</Text>
-          </TouchableOpacity>
-        </View> 
 
 
 </View>
   );
-  }
-  
+}
 
  {/* Styling */}
 
@@ -68,7 +55,7 @@ function owner_pfp() {
         backgroundColor: '#010C80',
     },
 
-
+  
     SettingsIcon: {
         position: 'absolute',
         width:40,
@@ -92,6 +79,18 @@ function owner_pfp() {
         zIndex: 1,
     },
 
+    editProfilePicture:{ 
+        position: 'absolute',
+        color: '#010C80',
+        height: 150,
+        top: 250,
+        right: 150,
+        fontSize: 9,
+        fontWeight: 'bold',
+        zIndex: 3,
+    },  
+
+    
     profileBanner: {
         position: 'absolute',
         borderRadius: 10,
@@ -103,6 +102,16 @@ function owner_pfp() {
         zIndex: 0,
     },
     
+    editProfileBanner:{
+        position: 'absolute',
+        color: '#010C80',
+        height: 150,
+        top: 230,
+        right: 40,
+        fontSize: 10,
+        fontWeight: 'bold',
+    }, 
+
     profileUsername: {
         color: '#F8FAFC',
         fontFamily: '/Users/danielpalacio/Downloads/School/491A/assets/fonts/Cabin Condensed.ttf',
@@ -130,6 +139,29 @@ function owner_pfp() {
         fontSize: 18,
 
     },
+
+
+
+    Name: {
+        color: '#F8FAFC',
+        fontFamily: '/Users/danielpalacio/Downloads/School/491A/assets/fonts/Cabin Condensed.ttf',
+        fontWeight: 'bold',
+        position: 'absolute',
+        top: 350, 
+        left: 30,
+        fontSize: 22,  
+        
+      },
+    Bio: {
+        color: '#F8FAFC',
+        fontFamily: '/Users/danielpalacio/Downloads/School/491A/assets/fonts/Cabin Condensed.ttf',
+        fontWeight: 'bold',
+        position: 'absolute',
+        top: 400, 
+        left: 30,
+        fontSize: 22,
+        
+      },
 
    
  })
